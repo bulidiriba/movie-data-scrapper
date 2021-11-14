@@ -17,7 +17,23 @@ This python script is intended to scrap Arabic movie data and actors data from t
 
         python3 movie-data-scrapper.py 2058504
 
-Then the returned result will be two dictionary data
+Then the returned result will be 
 
-        1. Movie Data and
-        2. Actors Data
+### 1. Movie Data 
+
+Dictionary data that contains all the following data of the given movie,
+
+            ID, Title, Poster Url, Rate, Genre,
+            Country, Duration, ReleaseDate,  Description,
+            Director, Writers, Actors, director_id, writers_id, actors_id
+
+### 2. Actors Data
+
+An Array data that contains dictionary data of each and every actors, writers data
+
+The actors and writers data contains the following information for all of them
+
+        id, name, image_url, description,
+        nationality, date_of_birth, place_of_birth
+
+Note: For some of the actors their data is not provided in the elcinema.com site itself, So here it will also be an empty data.
