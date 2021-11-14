@@ -2,18 +2,31 @@
 
 This python script is intended to scrap Arabic movie data and actors data from the elcinema.com for the given movie ID.
 
-### How does it work
-1. Make sure to have python3 and python3 virtual environment
+Its done using `beautiful soup` library of python.
 
-2. Install the python library in `requirements.txt`
+### How does it work
+1. Clone the script to some directory
+
+        cd [directory]
+        git clone https://github.com/bulidiriba/movie-data-scrapper.git
+
+2. Make sure to have python3 and python3 virtual environment
+
+        sudo pip3 install virtualenv
+        cd ~
+        virtualenv scrapper
+        cd [script-directory]
+        source ~/scrapper/bin/activate
+
+3. Install the python library in `requirements.txt`
 
         pip3 install -r requirements.txt
 
-3. Get the movie ID you want to scrap from the elcinema.com, from the url browser.
+4. Get the movie ID you want to scrap from the elcinema.com, from the url browser.
 
     E.g I get the ID of `Minamata` which is `2058504` 
 
-4. Execute the python script with passing movie ID as command line argument
+5. Execute the python script with passing movie ID as command line argument
 
         python3 movie-data-scrapper.py 2058504
 
