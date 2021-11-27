@@ -1,6 +1,9 @@
 from flask import Flask, jsonify
 from movie_data_scrapper import *
+
 app = Flask(__name__)
+app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app)
 
 @app.route("/")
 def home():
@@ -18,4 +21,4 @@ def get_data():
     return {"movie_data": movie_data, "persons_data": all_persons_data}
 
 if(__name__=="__main__"):
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
