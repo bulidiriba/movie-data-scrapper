@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 from movie_data_scrapper import *
 
 app = Flask(__name__)

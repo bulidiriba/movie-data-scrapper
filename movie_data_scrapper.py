@@ -4,8 +4,6 @@ import time
 import sys
 
 from bs4 import BeautifulSoup
-import numpy as np 
-import pandas as pd 
 from urllib.request import urlopen
 
 # get the title
