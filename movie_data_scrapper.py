@@ -170,16 +170,16 @@ def get_person_data(person_url_base, person_name, person_id):
     return person_data
 
 
-# get the id of the movie from argument
-movie_id = sys.argv[1]
-print("Movie Id: ", sys.argv[1])
+def get_m_data(movie_id):
+    movie_url_base = "https://elcinema.com/work/"
+    person_url_base = "https://elcinema.com/person/"
+    # get the movie data for the given movie id
+    movie_data, all_persons_data = get_movie_data(movie_url_base, person_url_base, movie_id)
 
-movie_url_base = "https://elcinema.com/work/"
-person_url_base = "https://elcinema.com/person/"
+    return movie_data, all_persons_data
 
-# get the movie data for the given movie id
-movie_data, all_persons_data = get_movie_data(movie_url_base, person_url_base, movie_id)
-print("\n-------------------MOVIE DATA--------------")
-print(movie_data)
-print("\n\n-------------------WRITERS, ACTORS DATA-------")
-print(all_persons_data)
+# movie_data, all_persons_data = get_m_data("2058504")
+# print("\n-------------------MOVIE DATA--------------")
+# print(movie_data)
+# print("\n\n-------------------WRITERS, ACTORS DATA-------")
+# print(all_persons_data)
