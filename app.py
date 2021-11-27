@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from movie_data_scrapper import *
 
@@ -12,13 +12,9 @@ def home():
 
 @app.route("/get_data", methods=["GET", "POST"])
 def get_data():
-    movie_data, all_persons_data = get_m_data("2058504")
-
-    # print("\n-------------------MOVIE DATA--------------")
-    # print(movie_data)
-    # print("\n\n-------------------WRITERS, ACTORS DATA-------")
-    # print(all_persons_data)
-
+    data = request.args
+    movie_id = data["movie_id"]        
+    movie_data, all_persons_data = get_m_data(movie_id)
     return {"movie_data": movie_data, "persons_data": all_persons_data}
 
 if(__name__=="__main__"):
